@@ -1,0 +1,9 @@
+{
+  "dockerComposeFile": "../docker-compose.yml",
+  "extensions": [],
+  "settings": {},
+  "postStartCommand": "rm -f /starter-rails/tmp/pids/server.pid && bundle exec rails server",
+  "postCreateCommand": "bundle install && npm && bundle exec rails db:setup",
+  "service": "web",
+  "workspaceFolder": "/starter-rails"
+}
